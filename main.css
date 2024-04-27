@@ -15,13 +15,6 @@ h1 {
     margin: 36px 0px;
 }
 
-h1 a {
-    font-size: 55pt;
-    color: #333;
-    text-decoration: none;
-    font-weight: 600;
-}
-
 nav {
     border-top: #d0d0d0 solid 1px;
     border-bottom: #d0d0d0 solid 1px;
@@ -39,8 +32,6 @@ li {
 }
 
 nav li a {
-    color: gray;
-    text-decoration: none;
     text-transform: uppercase;
     font-size: 16pt;
     font-weight: 600;
@@ -72,8 +63,6 @@ figure {
 }
 
 .post-content h2 a {
-    color: gray;
-    text-decoration: none;
     font-size: 20pt;
     font-weight: 500;
 }
@@ -84,13 +73,63 @@ figure {
     padding: 0px 20px;
 }
 
-.post-content a {
-    color: gray;
+a {
+    color: #666;
+    font-family: 'Lora';
     text-decoration: none;
 }
 
+a:hover {
+    color: #00ddff;
+}
 
+a:active {
+    color: #DEB887;
+}
 
+h1 a {
+    font-size: 55pt;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
 
+h1 a:hover,
+h1 a:active {
+    color: #333;
+}
 
-@media screen and (min-width: 600px) {}
+@media screen and (min-width: 800px) {
+
+    header ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+
+    header li {
+        padding: 5px 15px;
+    }
+
+    article {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .post-date {
+        min-width: 20%;
+        border-right: #d0d0d0 solid 1px;
+        border-bottom: none;
+        margin: 0;
+        padding: 30px 10px;
+    }
+
+    .post-content {
+        border-bottom: #d0d0d0 solid 1px;
+    }
+
+    .post-content h2 {
+        margin: 0;
+        padding: 30px 10px;
+    }
+}
