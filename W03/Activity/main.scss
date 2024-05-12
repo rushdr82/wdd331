@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+// VARIABLES
+$border-color: #d0d0d0;
+$hover-color: #00ddff;
+$active-color: #DEB887;
+$heading-color: #333;
+$link-color: #666;
+
+// MIXINS
+@mixin figure-container() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 25px 0px;
+    font-family: 'Lora';
+
+    h1 {
+        margin: 36px 0px;
+    }
+
+    nav {
+        border-top: $border-color solid 1px;
+        border-bottom: $border-color solid 1px;
+        margin: 20px 0px;
+
+        ul {
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+
+            @media screen and (min-width: 800px) {
+                display: flex;
+                flex-direction: row;
+                justify-content: right;
+            }
+
+            li {
+                padding: 13px 0px;
+
+                @media screen and (min-width: 800px) {
+                    padding: 5px 15px;
+                }
+
+                a {
+                    text-transform: uppercase;
+                    font-size: 16pt;
+                    font-weight: 600;
+                }
+
+            }
+        }
+    }
+}
+
+.post-date {
+    text-transform: uppercase;
+    font-size: 22pt;
+    font-weight: 700;
+    font-stretch: condensed;
+    text-align: right;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    border-bottom: $border-color solid 1px;
+    margin: 0;
+
+    @media screen and (min-width: 800px) {
+        min-width: 20%;
+        border-right: $border-color solid 1px;
+        border-bottom: none;
+        margin: 0;
+        padding: 30px 10px;
+    }
+}
+
+figure {
+    @include figure-container;
+}
+
+.post-content {
+    h2 {
+        text-align: left;
+        align-content: start;
+        margin: 30px 20px;
+
+        @media screen and (min-width: 800px) {
+            margin: 0;
+            padding: 30px 10px;
+        }
+
+        a {
+            font-size: 20pt;
+            font-weight: 500;
+        }
+    }
+
+    p {
+        font-weight: bold;
+        font-size: 13pt;
+        padding: 0px 20px;
+    }
+
+
+}
+
+a {
+    color: $link-color;
+    font-family: 'Lora';
+    text-decoration: none;
+}
+
+a:hover {
+    color: $hover-color;
+}
+
+a:active {
+    color: $active-color;
+}
+
+h1 {
+    a {
+        font-size: 55pt;
+        color: $heading-color;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover,
+    a:active {
+        color: $heading-color;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    article {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .post-content {
+        border-bottom: $border-color solid 1px;
+        max-width: 900px;
+    }
+}

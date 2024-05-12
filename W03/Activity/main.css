@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto; }
+
+header {
+  text-align: center;
+  padding: 25px 0px;
+  font-family: 'Lora'; }
+  header h1 {
+    margin: 36px 0px; }
+  header nav {
+    border-top: #d0d0d0 solid 1px;
+    border-bottom: #d0d0d0 solid 1px;
+    margin: 20px 0px; }
+    header nav ul {
+      list-style: none;
+      margin: 0 auto;
+      padding: 0; }
+      @media screen and (min-width: 800px) {
+        header nav ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: right; } }
+      header nav ul li {
+        padding: 13px 0px; }
+        @media screen and (min-width: 800px) {
+          header nav ul li {
+            padding: 5px 15px; } }
+        header nav ul li a {
+          text-transform: uppercase;
+          font-size: 16pt;
+          font-weight: 600; }
+
+.post-date {
+  text-transform: uppercase;
+  font-size: 22pt;
+  font-weight: 700;
+  font-stretch: condensed;
+  text-align: right;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  border-bottom: #d0d0d0 solid 1px;
+  margin: 0; }
+  @media screen and (min-width: 800px) {
+    .post-date {
+      min-width: 20%;
+      border-right: #d0d0d0 solid 1px;
+      border-bottom: none;
+      margin: 0;
+      padding: 30px 10px; } }
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.post-content h2 {
+  text-align: left;
+  align-content: start;
+  margin: 30px 20px; }
+  @media screen and (min-width: 800px) {
+    .post-content h2 {
+      margin: 0;
+      padding: 30px 10px; } }
+  .post-content h2 a {
+    font-size: 20pt;
+    font-weight: 500; }
+.post-content p {
+  font-weight: bold;
+  font-size: 13pt;
+  padding: 0px 20px; }
+
+a {
+  color: #666;
+  font-family: 'Lora';
+  text-decoration: none; }
+
+a:hover {
+  color: #00ddff; }
+
+a:active {
+  color: #DEB887; }
+
+h1 a {
+  font-size: 55pt;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600; }
+h1 a:hover,
+h1 a:active {
+  color: #333; }
+
+@media screen and (min-width: 800px) {
+  article {
+    display: flex;
+    flex-direction: row; }
+
+  .post-content {
+    border-bottom: #d0d0d0 solid 1px;
+    max-width: 900px; } }
+
+/*# sourceMappingURL=main.css.map */
