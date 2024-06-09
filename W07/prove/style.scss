@@ -1,0 +1,169 @@
+// Variables
+$primary-color: #6C757D;
+$secondary-color: green;
+$text-secondary-color: #808080;
+$background-color: #F8F9FA;
+$border-color: #E0E0E0;
+
+// Base styles
+body {
+    font-family: helvetica, arial, san-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: $background-color;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart__summary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    h2 {
+        display: flex;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: $primary-color;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .cart__items {
+        display: flex;
+        padding: 10px;
+        border-radius: 20px;
+        align-items: center;
+        font-size: larger;
+        background-color: $primary-color;
+        color: white;
+        max-width: 10px;
+    }
+}
+
+.item__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .item__section {
+        border-radius: 4px;
+        border: 1px solid $border-color;
+
+        .item {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            border-bottom: 1px solid $border-color;
+            background-color: white;
+            padding: 10px 20px;
+
+            P {
+                margin: 0;
+                display: flex;
+            }
+
+            .item__name {
+                font-weight: bold;
+            }
+
+            .item__description {
+                font-size: smaller;
+                color: $text-secondary-color;
+                grid-row: 2/3;
+            }
+
+            .item__price {
+                font-weight: bold;
+                color: $text-secondary-color;
+                grid-column: 2/3;
+                justify-content: right;
+            }
+        }
+
+        .promo {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            padding: 10px 20px;
+            font-weight: bold;
+            color: $secondary-color;
+            background-color: $background-color;
+
+            p {
+                margin: 0;
+                display: flex;
+            }
+
+            .promo__description {
+                grid-row: 2/3;
+                margin-top: 10px;
+                text-transform: uppercase;
+                font-weight: lighter;
+                font-size: smaller;
+            }
+
+            .discount {
+                justify-content: right;
+                grid-column: 2/3;
+            }
+        }
+
+        .total {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            border-top: 1px solid $border-color;
+            background-color: white;
+            padding: 10px 20px;
+            font-weight: bold;
+
+            p {
+                margin: 0;
+                display: flex;
+            }
+
+            .total__price {
+                grid-column: 2/3;
+                justify-content: right;
+            }
+        }
+    }
+
+    .promo__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 10px;
+        background-color: white;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        margin-top: 30px;
+
+        #promo-code[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid $border-color;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .btn__redeem {
+            padding: 10px 20px;
+            background-color: $primary-color;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            color: white;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: darken($primary-color, 10%);
+            }
+
+        }
+    }
+}

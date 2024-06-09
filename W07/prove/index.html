@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart Summary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cart__summary">
+        <h2>Your cart</h2>
+        <p class="cart__items">3</p>
+    </div>
+    <div class="item__container">
+        <div class="item__section">
+            <div class="item">
+            <p class="item__name">Product name</p>
+            <p class="item__description">Brief description</p>
+            <p class="item__price">$12</p>
+            </div>
+            <div class="item">
+            <p class="item__name">Second product</p>
+            <p class="item__description">Brief description</p>
+            <p class="item__price">$8</p>
+            </div>
+            <div class="item">
+            <p class="item__name">Third item</p>
+            <p class="item__description">Brief description</p>
+            <p class="item__price">$5</p>
+            </div>
+            <div class="promo">
+            <p class="promo__code">Promo code:</p>
+            <p class="promo__description">examplecode</p>
+            <p class="discount">-$5</p>
+            </div>
+            <div class="total">
+            <p>Total (USD)</p>
+            <p class="total__price">$20</p>
+            </div>
+        </div>
+        <div class="promo__container">
+            <label for="promo__input"> </label>
+            <input type="text" id="promo-code" name="promo-code" placeholder="Promo code">
+            <button type="button" class="btn__redeem">Redeem</button>
+        </div>
+    </div>
+</body>
+</html>
