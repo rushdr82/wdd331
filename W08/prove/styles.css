@@ -98,13 +98,17 @@ body {
   width: 12.5%;
   background-color: darkred;
   border-radius: 100% 0 0 100% /50% 0 0 50%;
-  animation: move-left 2.5s ease-out infinite; }
+  animation: move-left 3s ease-out infinite; }
 
 @keyframes move-left {
   0% {
     transform: translate(0%, 0); }
+  25% {
+    transform: translate(-50%, 0); }
   50% {
     transform: translate(-50%, 0); }
+  75% {
+    transform: translate(0%, 0); }
   100% {
     transform: translate(0%, 0); } }
 .splitting-circle-right {
@@ -115,13 +119,17 @@ body {
   width: 12.5%;
   background-color: darkred;
   border-radius: 0 100% 100% 0 / 0 50% 50% 0;
-  animation: move-right 2.5s ease-out infinite; }
+  animation: move-right 3s ease-out infinite; }
 
 @keyframes move-right {
   0% {
     transform: translate(0%, 0); }
+  25% {
+    transform: translate(50%, 0); }
   50% {
     transform: translate(50%, 0); }
+  75% {
+    transform: translate(0%, 0); }
   100% {
     transform: translate(0%, 0); } }
 .container-four {
